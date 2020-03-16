@@ -42,8 +42,6 @@ CVT <- CVT[!duplicated(CVT$date_day), ]
 ## Calculate new cases per day
 IVT <- CVT
 
-names(IVT)
-
 IVT[, 1:(ncol(IVT)-3)] <- lapply(IVT[, 1:(ncol(IVT) - 3)], as.numeric) 
 
 for (i in 1:(ncol(IVT)-3)) {
