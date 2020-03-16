@@ -39,10 +39,6 @@ CVT$date_day <- as.Date(CVT$date_R)
 CVT <- CVT[!duplicated(CVT$date_day), ]
 
 
-########### Cumulative cases per day
-
-
-
 ## Calculate new cases per day
 IVT <- CVT
 
