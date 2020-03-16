@@ -39,10 +39,10 @@ CVT$date <- row.names(CVT)
  CVT$date <- str_replace_all(CVT$date, "X4", "Apr")
 
 
- CVT$date_R <- strptime(CVT$date, "%b.%d.%y") %>% as.POSIXct
+CVT$date_R <- strptime(CVT$date, "%b.%d.%y") %>% as.POSIXct
 
 
- CVT$date_day <- as.Date(CVT$date_R,  origin = "1970-01-01")
+CVT$date_day <- as.Date(CVT$date_R,  origin = "1970-01-01")
 
 
  CVT <- CVT[!duplicated(CVT$date_day), ]
@@ -55,14 +55,15 @@ IVT[, 1:(ncol(IVT)-3)] <- lapply(IVT[, 1:(ncol(IVT) - 3)], as.numeric)
  for (i in 1:(ncol(IVT)-3)) {
  for (j in (2:(nrow(IVT)))) {
    IVT[j, paste0(names(IVT)[i], "_incident_case")] <- IVT[j, i ] - IVT[j - 1, i ]
-   IVT[j, paste0(names(IVT)[i], "_incident_case")] <- ifelse(IVT[j, paste0(names(IVT)[i], "_incident_case")] <0, 0,
+   IVT[j, paste0(names(IVT)[i], "_incident_case")] <- ifelse(IVT[j, paste0(names(IVT)[i], "_incident_case")] < 0, 0,
                                                              IVT[j, paste0(names(IVT)[i], "_incident_case")])
                          }
  
                            }
 
 
-x <- sort(colMeans(IVT[c((nrow(IVT) -5):nrow(IVT)), (grepl("_incident_case", names(IVT))) %>% which]), decreasing = TRUE)
+x <- sort(colMeans(IVT[c((nrow(IVT) -5):nrow(IVT)), 
+                       (grepl("_incident_case", names(IVT))) %>% which]), decreasing = TRUE)
 
 names(x) <- sub("_incident_case", "", names(x))
 
