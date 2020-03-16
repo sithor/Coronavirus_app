@@ -15,7 +15,7 @@ source("main.R")
 
 ## Daily incident confirmed cases.
 
-This is generated from the [Johns Hopkins University github website](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv), which is a tally of cumulative cases by city or country. The plots are sorted with the city or country with the highest mean daily count over the last week. The red line is a loess smoother (type of moving average) that indicates the average overall trend. Plots of daily mortality counts are available [here](https://sithor.shinyapps.io/coronavirus_mortality/)
+This is generated from the [Johns Hopkins University github website](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv), which is a tally of cumulative cases by city or country. The plots are sorted with the city or country with the highest mean daily count over the last week. The red line is a loess smoother (type of moving average) that indicates the average overall trend. Plots of daily mortality counts are available [here](https://sithor.shinyapps.io/coronavirus_mortality/).
 
 ```{r plots_by_city, echo = FALSE}
 for (i in 1:length(x)) {
