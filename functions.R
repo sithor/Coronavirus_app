@@ -1,5 +1,6 @@
 ## function for scatterplot and lowess
 
+
 ## Country is Country for which data reported (string)
 ## date_var is date variable (string)
 ## data is data.frame (name).

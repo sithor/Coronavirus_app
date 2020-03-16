@@ -1,5 +1,3 @@
-
-
 pacman::p_load(magrittr, epiDisplay, RCurl, stringr)
 
 rm(list = ls())
