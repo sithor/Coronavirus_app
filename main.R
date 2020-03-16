@@ -31,8 +31,6 @@ names(CVT)[ which(is.na(names(CVT)))] <- CVT[ 2 , which(is.na(names(CVT)))] ## c
 
 
   CVT[is.na(CVT)] <- 0
-#
-#
 
 CVT$date <- row.names(CVT)
  CVT$date <- str_replace_all(CVT$date, "X1", "Jan")
@@ -71,6 +69,4 @@ names(x) <- sub("_incident_case", "", names(x))
 # ######## For function, see function file...-------
 
  IVT[is.na(IVT)] <- 0
- 
- 
  
