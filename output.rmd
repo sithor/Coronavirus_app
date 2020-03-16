@@ -11,6 +11,7 @@ source("main.R")
 
 
 
+
 ```
 
 ## Plots of daily incident cases of Covid-19, by city or country.
