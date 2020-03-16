@@ -11,7 +11,7 @@ plot_and_lowess <- function(country = "Beijing", data = IVT, date_var = "date_R"
   
    plot(data[, date_var], data[, paste0(country, "_incident_case")], xlab = "Date", ylab = "Counts per day", 
    main = country)
-  lines(lowess(data[, date_var], data[, paste0(country, "_incident_case")], f = 0.35), col = "red", lwd = 2)
+  lines(lowess(data[, date_var], data[, paste0(country, "_incident_case")], f = 0.45), col = "red", lwd = 2)
 }
 
 
