@@ -20,7 +20,6 @@ library(dplyr)
 CVT[] <- lapply(CVT, as.character)
  names(CVT) <- CVT[1,]
 
- CVT %>% head
 names(CVT)[ which(is.na(names(CVT)))] <- CVT[ 2 , which(is.na(names(CVT)))] ## country names for no province
 
 
