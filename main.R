@@ -69,5 +69,9 @@ names(x) <- sub("_incident_case", "", names(x))
 
 # ######## For function, see function file...-------
 
- IVT[is.na(IVT)] <- 0
- 
+# IVT[is.na(IVT)] <- 0
+
+## drop countries or cities with no cases
+for (i in 1:length(x)) x[i] <- ifelse(sum(IVT[, names(x)[i], drop = FALSE]) == 0, FALSE, TRUE)
+
+x <- x[x == 1]  
