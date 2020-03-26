@@ -5,7 +5,7 @@ library(dplyr)
 
 source("functions.R")
 
-file_path <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
+file_path <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/0841024637ac29f2d629af1ff9314f1fa7002dc4/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 # file_path_death <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
  CV <- read.csv(file_path, na.strings = "", stringsAsFactors = FALSE)
  CV %>% head
